@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- External CSS -->
+    <!--link rel="stylesheet" href="style.css"-->
+    <!-- Internal CSS -->
+    <style>
+        .main{
+            border: 1px solid red;
+            margin: 100px;
+            padding: 100px;
+            background:linear-gradient(90deg, rgb(150, 99, 127) 0%, rgb(230, 163, 202) 50%, rgb(206, 24, 242) 100%);
+            border-radius: 10px;
+            text-align: center;
+            background-size: cover;
+        }
+        @media {max-width : 600px;}
+        .relative{
+            width: 100%;
+            height: 100%;
+        }
+        .relative{
+            border:3px solid skyblue;
+            width: 500px;
+            height: 300px;
+            position: relative;
+            background-color: red;
+            color: white;
+            font-size: 20px;
+        }
+        .absolute{
+            border: 3px solid pink;
+            width: 200px;
+            height:200px;
+            position:absolute;
+            bottom: 50px;
+            right: 100px;
+            box-shadow: 10px 0 10px 10px rgba(255, 192, 203, 0.233) ;
+
+        }
+        .flex-container{
+            background-color: lavender;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            /* different justify contents are: flex-start, flex-end, center & space-between */
+        }
+        .flex-container > div{
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
+        /* for class */
+        .red{
+            color: blue;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        /* for id */
+        #red{
+            color:pink;
+            font-size: 25px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+     <!-- Inline CSS -->
+        <!--p style="color: red;">This is the content.</p-->
+    <div>
+        <p class="red">This is the content.</p>
+        <p id="red">This is the content.</p>
+        <p class="main"> This is content.</p>
+    </div>
+    <div class="relative">
+        <p>This is relative content.</p>
+        <div class="absolute">
+            <p>This is the absolute content.</p>
+        </div>
+        <!-- shortcut div.main-div then enter -->
+    </div>
+    <br>
+    <div class="main-div">
+        <div class="flex-container">
+            <div>First Div</div>
+            <div>Second Div</div>
+            <div>Third Div</div>
+            <div>Fourth Div</div>
+            <div>Fifth Div</div>
+            <div>Sixth Div</div>
+        </div>
+    </div>    
+</body>
+</html>
