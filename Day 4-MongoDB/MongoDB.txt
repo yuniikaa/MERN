@@ -1,0 +1,57 @@
+//create db
+use student
+
+//create document 
+db.createCollection('student')
+
+//insert data
+db.student.insertOne({
+    name: "John",
+    rollno: 10,
+    email: 'john@gmail.com'
+})
+
+
+//update data
+db.student.updateOne(
+    {name:"John"},
+    { $set: {
+            rollno: 30
+        }}
+ )
+ 
+ //view data
+ db.student.find({
+    name:"John"
+})
+
+//delete data
+db.student.deleteOne(
+    {name:"John"}
+)
+
+//insert many data
+db.student.insertMany(
+[
+{ 
+name:'Alice',
+age:21,
+email:"alice@gmail.com"
+},
+{ 
+name:'Silu',
+age:20,
+email:"silu@gmail.com"
+},
+{ 
+name:'Lisa',
+age:25,
+email:"lisa@gmail.com"
+}
+])
+
+//drop the collection
+db.student.drop()
+
+//drop database
+db.dropDatabase()
